@@ -18,6 +18,13 @@ const createAppRouter = () =>
         return { Component: SmileyEmoji };
       },
     },
+    {
+      path: paths.chart.path,
+      lazy: async () => {
+        const { Chart } = await import("../features/chart");
+        return { Component: Chart };
+      },
+    },
   ]);
 
 export const AppRouter = () => {

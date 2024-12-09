@@ -7,4 +7,8 @@ export const paths = {
     path: "/emojies",
     getHref: () => "/emojies",
   },
+  chart: {
+    path: "/chart",
+    getHref: () => "/chart",
+  },
 } as const;
