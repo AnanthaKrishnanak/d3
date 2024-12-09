@@ -1,11 +1,6 @@
-import * as d3 from "d3";
-
-type CricleProps = {
-  cx: number;
-  cy: number;
-  r: number;
-  fill: string;
-};
+import { Face } from "./face";
+import { Eye } from "./eye";
+import { Mouth } from "./mouth";
 
 //face
 const width = 500;
@@ -24,39 +19,24 @@ const eyeOffsetY = 80;
 const mouthRadius = 180;
 const mouthWidth = 15;
 
-const Eye = (props: CricleProps) => {
-  const { cx, cy, ...rest } = props;
-
-  return (
-    <g transform={`translate(${cx}, ${cy})`}>
-      <circle {...rest} />
-      <circle r={eyeRadius / 4} fill="white" cy={eyeRadius / 2} />
-    </g>
-  );
-};
-
-const mouthArc = ({
-  innerRadius,
-  outerRadius,
-  startAngle,
-  endAngle,
-}: {
-  innerRadius: number;
-  outerRadius: number;
-  startAngle: number;
-  endAngle: number;
-}) =>
-  d3
-    .arc()
-    .innerRadius(innerRadius)
-    .outerRadius(outerRadius)
-    .startAngle(startAngle)
-    .endAngle(endAngle)({
-    innerRadius,
-    outerRadius,
-    startAngle,
-    endAngle,
-  })!;
+const Eyes = () => (
+  <>
+    <Eye
+      cx={-eyeOffesetX}
+      cy={-eyeOffsetY}
+      r={eyeRadius}
+      fill="black"
+      eyeRadius={eyeRadius}
+    />
+    <Eye
+      cx={+eyeOffesetX}
+      cy={-eyeOffsetY}
+      r={eyeRadius}
+      fill="black"
+      eyeRadius={eyeRadius}
+    />
+  </>
+);
 
 export const SmileyEmoji = () => {
   return (
@@ -64,35 +44,21 @@ export const SmileyEmoji = () => {
       <h1>1. Smiley Emoji with SVG & D3</h1>
       <svg width={width} height={height}>
         <g transform={`translate(${centerX}, ${centerY})`}>
-          <circle
-            r={radius}
-            fill="yellow"
-            stroke="black"
-            strokeWidth={strokeWidth}
-          />
-          <Eye cx={-eyeOffesetX} cy={-eyeOffsetY} r={eyeRadius} fill="black" />
-          <Eye cx={+eyeOffesetX} cy={-eyeOffsetY} r={eyeRadius} fill="black" />
-          <path
-            d={mouthArc({
-              innerRadius: mouthRadius,
-              outerRadius: mouthRadius + mouthWidth,
-              startAngle: Math.PI / 2,
-              endAngle: (Math.PI * 3) / 2,
-            })}
+          <Face radius={radius} strokeWidth={strokeWidth} fill="yellow" />
+          <Eyes />
+          <Mouth
+            innerRadius={mouthRadius}
+            outerRadius={mouthRadius + mouthWidth}
+            startAngle={Math.PI / 2}
+            endAngle={(Math.PI * 3) / 2}
           />
         </g>
       </svg>
       <hr />
       <svg width={width} height={height}>
         <g transform={`translate(${centerX}, ${centerY})`}>
-          <circle
-            r={radius}
-            fill="red"
-            stroke="black"
-            strokeWidth={strokeWidth}
-          />
-          <Eye cx={-eyeOffesetX} cy={-eyeOffsetY} r={eyeRadius} fill="black" />
-          <Eye cx={+eyeOffesetX} cy={-eyeOffsetY} r={eyeRadius} fill="black" />
+          <Face radius={radius} fill="red" strokeWidth={strokeWidth} />
+          <Eyes />
           <line
             x1="-90"
             y1="80"
