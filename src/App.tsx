@@ -1,4 +1,4 @@
-import { AppRouter } from "./routes/router";
+import { AppRouter } from "./app/router";
 
 const App = () => {
   return <AppRouter />;

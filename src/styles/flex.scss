@@ -13,3 +13,9 @@
   @extend .flex;
   flex-direction: row;
 }
+
+.flexCenter {
+  @extend .flex;
+  justify-content: center;
+  align-items: center;
+}
