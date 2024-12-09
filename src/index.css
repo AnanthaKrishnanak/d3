@@ -1,5 +1,11 @@
 body {
   margin: 0;
   padding: 24px;
+  height: 100vh;
+  width: 100vw;
   overflow: auto;
+}
+
+.h-full {
+  height: 100%;
 }
