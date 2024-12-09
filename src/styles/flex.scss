@@ -1,0 +1,15 @@
+.flex {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.flexCol {
+  @extend .flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  @extend .flex;
+  flex-direction: row;
+}
