@@ -1,9 +1,7 @@
-import { SmileyEmoji } from "./features/smiley-emoji";
-
-import "./styles/flex.scss";
+import { AppRouter } from "./routes/router";
 
 const App = () => {
-  return <SmileyEmoji />;
+  return <AppRouter />;
 };
 
 export default App;

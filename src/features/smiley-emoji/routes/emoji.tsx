@@ -1,6 +1,6 @@
-import { Face } from "./face";
-import { Eye } from "./eye";
-import { Mouth } from "./mouth";
+import { Eye } from "../components/eye";
+import { Face } from "../components/face";
+import { Mouth } from "../components/mouth";
 
 //face
 const width = 500;
