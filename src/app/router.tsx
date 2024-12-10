@@ -19,9 +19,16 @@ const createAppRouter = () =>
       },
     },
     {
-      path: paths.chart.path,
+      path: paths.pie.path,
       lazy: async () => {
-        const { Chart } = await import("../features/chart");
+        const { Chart } = await import("../features/chart/pie");
+        return { Component: Chart };
+      },
+    },
+    {
+      path: paths.bar.path,
+      lazy: async () => {
+        const { Chart } = await import("../features/chart/bar");
         return { Component: Chart };
       },
     },
