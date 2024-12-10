@@ -15,4 +15,8 @@ export const paths = {
     path: "/bar-chart",
     getHref: () => "/bar-chart",
   },
+  scatterPlot: {
+    path: "/scatter-plot",
+    getHref: () => "/scatter-plot",
+  },
 } as const;
