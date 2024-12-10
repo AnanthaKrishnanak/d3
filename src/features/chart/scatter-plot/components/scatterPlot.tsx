@@ -5,7 +5,7 @@ import { Margin } from "../../../../types";
 import {
   DEFAULT_HEIGHT,
   DEFAULT_WIDTH,
-  MARGIN,
+  DEFAULT_MARGIN,
 } from "../../../../constants/defaults";
 import { XAxisLabels, YAxisLabels } from "../../../../components/axis";
 import { AxisTitle } from "../../../../components/title";
@@ -30,7 +30,7 @@ export const ScatterPlot = ({
   data,
   width = DEFAULT_WIDTH,
   height = DEFAULT_HEIGHT,
-  margin = MARGIN,
+  margin = DEFAULT_MARGIN,
   xaxisLabel,
   yaxisLabel,
   showAxisLines,

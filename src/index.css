@@ -29,6 +29,14 @@ text {
   font-size: 13px;
 }
 
-line {
-  stroke: #f3f3f3;
+.axis {
+  line {
+    stroke: #f3f3f3;
+  }
+}
+
+.home {
+  ul li {
+    text-transform: capitalize;
+  }
 }
