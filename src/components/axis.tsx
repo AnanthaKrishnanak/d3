@@ -6,15 +6,15 @@ export const XAxisLabels = ({
   innerHeight,
   showAxisLines,
 }: {
-  labels: number[];
-  xScale: ScaleLinear<number, number, never>;
+  labels: (number | string)[];
+  xScale: any;
   innerHeight: number;
   showAxisLines?: boolean;
 }) => {
   return (
     <>
       {labels.map((label) => (
-        <g transform={`translate(${xScale(label)}, 0)`}>
+        <g transform={`translate(${xScale(label)}, 0)`} className="axis">
           {showAxisLines && <line y2={innerHeight} />}
           <text
             style={{ textAnchor: "middle" }}
@@ -42,7 +42,7 @@ export const YAxisLabels = ({
   return (
     <>
       {labels.map((label) => (
-        <g transform={`translate(0, ${yScale(label)})`}>
+        <g transform={`translate(0, ${yScale(label)})`} className="axis">
           {showAxisLines && <line x2={innerHeight} />}
           <text
             style={{ textAnchor: "end" }}
