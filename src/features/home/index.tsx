@@ -14,6 +14,9 @@ export const Home = () => {
         <li>
           <a href={paths.bar.path}>Bar Chart</a>
         </li>
+        <li>
+          <a href={paths.scatterPlot.path}>Scatter Plot</a>
+        </li>
       </ul>
     </div>
   );

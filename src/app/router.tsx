@@ -32,6 +32,15 @@ const createAppRouter = () =>
         return { Component: Chart };
       },
     },
+    {
+      path: paths.scatterPlot.path,
+      lazy: async () => {
+        const { ScatterPlotExample } = await import(
+          "../features/chart/scatter-plot"
+        );
+        return { Component: ScatterPlotExample };
+      },
+    },
   ]);
 
 export const AppRouter = () => {
