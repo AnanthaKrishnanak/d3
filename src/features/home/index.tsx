@@ -9,7 +9,10 @@ export const Home = () => {
           <a href={paths.emojies.path}>Emojies</a>
         </li>
         <li>
-          <a href={paths.chart.path}>Chart</a>
+          <a href={paths.pie.path}>Pie Chart</a>
+        </li>
+        <li>
+          <a href={paths.bar.path}>Bar Chart</a>
         </li>
       </ul>
     </div>
