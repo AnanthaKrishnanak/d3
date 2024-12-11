@@ -1,5 +1,5 @@
 import { paths } from "../config/path";
-import { Home } from "../features/home";
+import { Home } from "../components/home";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 

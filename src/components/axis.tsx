@@ -33,6 +33,7 @@ export const YAxisLabels = ({
   labels,
   yScale,
   showAxisLines,
+  innerWidth,
 }: {
   labels: number[];
   yScale: ScaleLinear<number, number, never>;
@@ -43,7 +44,7 @@ export const YAxisLabels = ({
     <>
       {labels.map((label) => (
         <g transform={`translate(0, ${yScale(label)})`} className="axis">
-          {showAxisLines && <line x2={innerHeight} />}
+          {showAxisLines && <line x2={innerWidth} />}
           <text
             style={{ textAnchor: "end" }}
             dx={-4}
