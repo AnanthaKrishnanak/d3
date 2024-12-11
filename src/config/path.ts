@@ -24,4 +24,8 @@ export const paths: { [key: string]: { path: string; getHref: () => string } } =
       path: "/line-chart",
       getHref: () => "/line-chart",
     },
+    tree: {
+      path: "/tree",
+      getHref: () => "/tree",
+    },
   } as const;

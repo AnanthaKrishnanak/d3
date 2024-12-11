@@ -3,10 +3,11 @@ body {
   margin: 0;
   padding: 24px;
   height: 100vh;
-  width: 100vw;
-  overflow: auto;
+  width: 100%;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  overflow: hidden;
+  overflow-y: auto;
   font-style: normal;
 }
 
@@ -39,4 +40,13 @@ text {
   ul li {
     text-transform: capitalize;
   }
+}
+
+.rectNodeLabel {
+  cursor: pointer;
+  fill: lightgray;
+}
+
+.rectNodeLabel:hover {
+  fill: gray;
 }
