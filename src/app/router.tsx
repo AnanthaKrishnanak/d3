@@ -43,10 +43,16 @@ const createAppRouter = () =>
     },
     {
       path: paths.line.path,
-
       lazy: async () => {
         const { LineChartExample } = await import("../features/chart/line");
         return { Component: LineChartExample };
+      },
+    },
+    {
+      path: paths.tree.path,
+      lazy: async () => {
+        const { TreeExample } = await import("../features/chart/tree");
+        return { Component: TreeExample };
       },
     },
   ]);
